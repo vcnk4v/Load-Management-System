@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../static/navbar.css">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+    </style>
+    
+        
+        <div class="navbar">
+                <img src="../static/logo.png">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('status') }}">Status</a>
+            <a href="{{ url_for('notifications') }}">Notifications</a>
+            <a href="{{ url_for('predictive') }}">Predictive Analysis</a>
+            <a href="{{ url_for('failure') }}">Failure Analysis</a>
+            <a href="{{ url_for('energy') }}">Energy Saving</a>
+            <a href="{{ url_for('analysis') }}">Data Analytics</a>
+
+        </div>
+
+        <h1 style="margin-top:5%;font-size: 40px;">PROJECT DESCRIPTION</h1>
+        <div style="display:flex">
+        <pre style="font-size:20px;width: 35%;">            
+            
+            
+            
+    Our objective is to maximize the utilization 
+    of solar energy and minimize the use of 
+    conventional energy while ensuring a stable 
+    power supply to meet the load demand. 
+    The model is designed to meet the load 
+    demand at all times with the best possible source. 
+    Moreover it will be scalable and adaptable
+    to different situational requirements 
+    and solar energy production levels.</pre>
+    
+    <img src="https://flolive.net/wp-content/uploads/2021/05/small-solar-panels.jpg" style="width:40%;margin-left: 10%;">
+</div>
+<p style="font-weight:bold;font-size:35px">OUR SERVICES</p>
+<div class="containerm">
+    <div class="row">
+        <a href="{{ url_for('status') }}">
+        <div class="image" data-text="Real Time Monitoring">
+            <img src="https://www.virtualmetric.com/blog/wp-content/uploads/2021/03/Blog-post-37_5.jpg" alt="">
+            <span class="text-overlay">Real Time Monitoring</span>
+        </div>
+        </a>
+        <a href="{{ url_for('notifications') }}">
+        <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv7QRJPalKxtd5lfhsynkzORh01eiZJTDVo-aoBPyZO2MelrL9dRQKJBAqWdXtnBRVjgg&usqp=CAU" alt="">
+            <span class="text-overlay"><br>Notifications</span>
+        </div>
+        </a>
+        <a href="{{ url_for('failure')}}">
+            <div class="image">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxEQEBUPEBAQEBUSFRIZEBgREBYVFRoZFRUYFxYXFRgeHSggGBslGxcTITIhJSorLi4uGB8zODMtNygvMysBCgoKDg0OGxAQGy0mHyUtLS0yLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAMMBAwMBIgACEQEDEQH/xAAbAAEBAAMBAQEAAAAAAAAAAAAABgQFBwMBAv/EAEYQAAIBAwAGBgYGBwYHAQAAAAABAgMEEQUGEiExQRMiUWFxgQcyUpGhsRQjQmLB0RUWU1SSk+EzcrLC0vAkQ2OClKLxF//EABkBAQADAQEAAAAAAAAAAAAAAAACAwQBBf/EAC4RAAICAQIEBAYCAwEAAAAAAAABAgMRITEEEkFREyJhgTJxkaHB0bHwFDPhI//aAAwDAQACEQMRAD8A7iAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaHWPWejZbMZqU5y3qMMcO1t8Eb457rZBS0vbJpNNUcprKf1suJdRCM54lthv7FN85QhmO+UjI//R6P7Cp/HAodXtP0r2DlTUoyjjbjLGVng925riZ/6Po/sqf8uP5EP6OFi5uUtySWP42TaqnXJxTTWOuStO2E4xk0856YOhAAzGoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxb+9p0KcqtWShGKy2/wDe99xDQ9I/1u+3xRzjO09vHbjGM9xgaer1NI6R+hSqKjTpzcYpvGdnjLH2pvfhFtLVq2dr9E6PqcnnrbXt59r/AOcDYq6qUvFWW/svyzz/ABLr5PwnhR0+b/RtLS6hVhGpTkpxksxa4M1umdZba03VKmZ8oQ60/NcvPBDx0TpSyc7a26SdOo+rKGMeKbf1b7TdaB1DhH6y8l003vcU3sZ+8+M38PE54NMHzSnldEt3+iSvumuWMMPq3sv2YVXXe7uHs2dt54dSXnjCj55P1onQN/cXdO7veqqbi1nY2nstuMVGPBZfMuoxpUIblClCPhGK/A1F1rhY09zrqT/6cZT+KWPiFc3mNMMfVv6knSk07Z5640SN+znVbQWkLKvUq2fXhNt7thvDecSjLszyN4tfbLtq/wApmbZ612VXdG4hFvlUzD/EkiEFbUm+XR90Tm6rcebVdmTlvrvcUZKF5bNd6jKnLxxLc/eVeidOW90vqqib5xlumvL8VuMyvQp1obM4wqRftJSTI/TWpCT6ayk6c471ByeM/clxi/Hd4DNM9Mcr+30O4th15l9yt0lf07em6tWWzGPvb5JLm2RtDX99IukoKNJvGU25Lv7JYyspGJT0PpC+qQjd7dOFNYbkkvHZS9aT9osLvV63qW6tthRjFdRr1ov2k+3t7TvLVXpLzP06HcznrHReptLetGpFTg1KMlmLT3NM9Tnmpd5UoXcrHbVWnmeHHfFOKztR7E+DXadDKbK+SWPcshLmWQACBMAAAAAAAAAAAAAAAAAAAAAAAAAAAjdc9VPpKdxb9WvHilu28cN/KS5P/a/eoOsM7qEqFbfUopdb2k21v+8sb/E9NftNu1t9iDxUrZjFrio/bkvJ48WfNQdB/RrfpZrFSsk5fdj9mPxy/HuNmc8Nmffy9/X2PPwlxf8A59vN29Pcq2R+s2usKDdG2SrVc4b4wi+zd60u5HhrzrFOLVjbZdWeFNx4ra4Qj95/BeJm6o6pQtIqrVSnWa48VDuj395GFcIR8Szrsu/q/QsstnZN11dN329F6mhttVr69aq3taVOL3pS3y8oblD59xQ2eotlTXWhOq+2pN/KOEVAIz4myWieF2WhZDha47rL7vU0n6q2P7rS9z/M195qHZz9RTov7k8r3SyVYK1bYtVJ/UsdUHvFfQ5vW0Pf6OfSW9R1aa3tRTax96n+K+BRata2UrvFOeKVX2c7pf3H+HEpiL1t1VU83NqtirHrSjHdtY35j2S+fiWqyNulmj7/ALK/DlXrDbt+izIvXbTFVVI2NumpVVHaa3N7baUYvlnG995mamaw/SoOlVf11Nb/AL0eG148mY2v2iHKCvKeVOljbxx2U8p+MXvOVQULeWf9fQlOXNXmJstVtXYWcMvEqsl15cl92PYvmUBptVtK/SreNR+vHq1V95c/NYfmbkqm5cz5tyyOMabAAECQAAAAAAAAAAAAAAAAAAAAAAAABotP6z29k1Cq5SlJZUYRy8dr3pJcTTS9JFrh4p188sxh/rLo8PdOPNGLaM8+LohLlnNJmou4/pHTPRvfToPDXLZpb5e+bwXenNIq2t513v2I9Vdsnuive0R3ostnJ17ma9ZxjFvm8uU8ebie3pUvGqdGhH7cpSa7dhJJe+XwNVsFPiI0raOF+WY6bHDhp3veWX+EeXo70U6kp6Qr9aUpS6Nvtfrz/BeZa2GkaNdN0akKii8S2HnD7GfnRVkqFvToLhCEYvveOs/N595z/RMnorScreTxRrYUW+GzJ5pvyeY+8qa/yJTkt0tF6ItUv8WMI40b8z9X1/Z08Hhc3EKUHOpOMIri5NJEZpb0hUoS2bem62HvlJ7Ef+3m/Hd5lFdU7PgWTVZdCv43j+foXQMTRt5GvShWg+rOKa/FPvT3GWV7aFieVlAAA6c61stJWN5TvqKxGcsyS4bX2o+Eo5+JeUakK1NSWJQqRz4qS4PyNZrjZqtZVVzhFzj4w3/LK8zC9Ht30lnsPjSnKPk8SX+LHkXy89Sl1Wn6KY+Wxro9TT6pN2mkKtm31Z5Uc9setB+cWzoJAa6xdvfULtJ46u1jm4PevFxaNj+v9t+yuP4Yf6ydlcrMTis5WvzEJKOYvoyuBq9C6bo3cXKk3mONqMliSzw8jaGZpp4ZankAA4dAAAAAAAAAAAAAAAAAAAAAOZ6boRqadp06kVOMthSUllNdE3hrxLf9XrL90t/5MfyJLW/RN5C+hf2tPpcKPBbTjKKcd8c700+R5S0/ppLLtUkuP/Dv/UehKErYQcJJYjj4sanlQsjVOxWQbzLPw50wjoNCjGEVGEYwiuCikkvBI5/6QOtpC0i+HU/9quH8ii1M1hd9Rk5xjGpTaU9n1XlZjJdmd+7uJ30nxcK9tcJcNr3wnGa+bK+GrcOI5Jb6/XBbxVkZ8Nzx28r9so6KSHpB0DK5oqpSi5VaT3KPGUZesl35w/J9pWUqiklJPKaTXg+B+2jNXY65KS3RsuqjbBwlszm1jqle3jjUvq04RSWzFtSnjuj6sPHj3FRLVK1VtO3p04x24423vnlb4ty47mk8cChSPpZZxNk+uF2WiK6uFrh6t7t6sgfR1pCVOdSwq7pRcnBPtTxOPyfvKfTGsNvar6yeZcoQ60/dy8XgnNbdWq87qNzabpSWKjU1BxaWNrPHfHc8dnee2htRacOvdSdefFxy9jPfzl5+4ts8Gb8RvfdLv1K6/FivDS26vbHQxLbXuc7iClThToSlhttuXZtZ4bnjKwXyZDa8VLSVP6PGUIVqGJQioYjhpNwTxhNrDx3I1WjdO3FataUY1Jx2HCM8S3SW1vclz6mFv7GRlUpxUorG/wDxlkbHF4bydIu4p05p8HGSfmmRnovk9isu+m/epfkiq03cdHbVans05teOy8fHBOejOhi3qT9qokvCMV+MmQh/pm/VEpf7I+5W16EKkdmcIzT4qUU17mYv6Ftf3ah/Kj+RptbtYalrKFGjFSqVN+9Zws4ikubbz7jVfpfTH7u/5H9TkaptZyl74JOcU8fg+6iRUby5itySkklw3VcIvSP1I0RWpTq3FeOxKpuUXx3y2pNrlvxuLAXtOe/b+Dta8oABSTAAAAAAAAAAAAAAAAAAAAAB51JJJuTSSTy292OeT9s5vrdpSrfXK0bavqp4qtcHJettP2I8+1+RbVU7JY2XV9kUX3qmPNu9ku77Gi0NpyVhXrxtoxrqo9mnxaezJ7Eklvlub95stKW+l7+KVW3eyntRWzCnh4x9qW1wZcavat0LKGIRUptdepJdZ+HYu5G7warOMhz80IrPd76dfQx1cDPw+WybxrottXntqc0t9NaUsYRjWttqnBJLahwUVhdeDa4dpU6v62W951FmnU9ifP8AuPhL59xRYIfW7VGLTurSPR1IdaUYblLG/MfZlz3cStTpteJJRb6rb3Rc67qVmMnJdnv7MuQTOpGn/pdHZn/a0sKp95PhPz595TGacHCTjLdGquanFSjswACJM0Om9V7e6bnKLhU3deHF44bS4P5ml0BqhVt7uNWc6c4U1Jxaym200sx5ce0uDB0rpKnbUpVqrwlwXNvlFd7LY22Y5E9HoQlCOeZk36RtJbNGNtH1qrTklx2Yvd75Y9zN9q5YfR7WnSfFRzP+9LfL4vHkSGrNlUv7t39ddSEuonwco+rGPdHc/HzKzWXSqtbeVTK2n1aS7ZPh7uPkWWxwo0rfr82Vwllux7dPkSkpfS9MrG+NFrwxS3/42dCIz0d6NcaUrmfrVniGeOynvfm/kizIXtc3Ktlp/fclSny5fXUAApLQAAAAAAAAAAAAAAAAAAAAAAADA0zd9Db1a3OnTnJeKi8fHBHeiuyzCrdS3ynLYTfYsSk/Nv4FLrhBysLhL9nJ+Ud7+CNT6MKqdk4841Zp+ai18GaoacNNrdtJ/Iw2a8XBPpFv32/gsQAZTcD4z6fGAc5oQ+haa2I7oVuXLFRZx/GjoxzPXS3dzpSFvBpScKcc8cPMpZfgmZEdC6Yt91Gv0kVw+tUvhNbjdbWrIwk5JPlW/U8+mx1ynFRbSb26ex0U+HPuk0892y/dbnyWr2lbndcXGxF8U6n+WCwyn/HS3nH65NHjt7Qf8FDpvWy2tk47Sq1F9iDT3/efCPz7iZstH3Wlaqr3DdOivVS3LHZTXPvk/wChvdDakW1BqU815L21iHlD88m+v9IUbaG3VnGnFcO/uiub7kd54V6VLL7/AKQ5JT1s0Xb9nta20KUI06cVGMViKRAa/SbvKUa22qCUcbK5N/WNdsuHwKbRGtltc1Oii5wk/VVRJbXg88e42Gl9F07qk6VVZXJrjF9sSEJOmzM0TklZHys97GVN04uk4uGyuj2eGzywZJzrUu8nSu5Wcaiq0m54cd8cxWdqPYnwZ0UjbXySx7koS5lkAArJgAAAAAAAAAAAAAAAAAAAAAAAHjcUlOEoSWVJNSXc1hnNtUrp6OvallXezGo0ot8NpepLwknjPgdPJfXLViN7Dai1CtBdST4SXHYl3cd/LJo4eyKzCz4ZfZ9GZOKqm+Wyv4o/ddUU+T6cs1e17qW6VC6TrRjujOLTmsbvCa7+PiWdvrlYTWfpEY904yi/ihbwttb1WV3Wx2rjKbFnOPR6FAYmkLyFCnKtUezGCy/wS7W+BodIa9WVJdScqz5KnF4/ieETC+maaqJtdDbxfLOwvB/8yfy7jtfDSfms8se7/As4qK8tfml2X5ZrdEawQjfyvbiMpbW24qGG4uXVXF70o7jo+h9ZrW6lsUqj28Z2ZxcX34zufke1DQVtGjGg6MJwgsLbipPvbb5sidI2NO20vbwoR6OLdJ4TeMylJP4FspV3t4TTS07YS+xTGNvDpZaab175Z0s0Gk9bLS3k6cpuU4+tGnFyw+xvhnuyb45pqRo2jc3Fw69NVdlprabxmU5ZbXPguJnqrjJSlLOF2NVs5JxjHd9zLutea1Z9HZ27y+Da25+UVuXnkWOqNzdT6a/qyX3c5njs9mC7kXNta06S2acI012QikvgZBLx1HStY9d39TipctZvP2RFax6nQdNVLOPRzpr1U/WS37nyn38zSVNY7y5pxsoxfSNuNSSypyXZJfZ55fyOoHmqaT2sLL4vG85G9pYks42z0Oyq1zF4NJqxq9Czhl4lVkl0kv8ALHsXzN+AUyk5PLLUklhAAHDoAAAAAAAAAAAAAAAAAAAAAAAAI70h6d+j2/QweKldNbuMYcJS8+C8+wqrq5jThKpN7MYRcpN8kllnN9XreWlNISvKqfRUmmk+G7+zh5es/wCpp4aCy7J/DHX5vojHxljwqofFLT5Lqyg1T1VpU7RRuKUJzq4lNTins7urFdjSfvbPatqFYyeVCpDujVlj45KhH0g+It5nLmabLFwtKiouKaXoTtnqZY0nnodtr9pJz+D3G/hBRWEkkuCW5eR+wVynKbzJ5+ZbCEYLEVj5AgddrG4heU72jTdVQUPVi5YlCTfWS34eUXx8wSqsdcub+6nLa1ZHGf6jnv64aS/cl/49b8zN9HmjK1Lpa1aDp9Ls7KksPc228cUt5agslenFxjFLPz/JXGhqSlKTeD6ADOaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAY15OUac5QjtyjGTjHtaTaXmwcbwQ3pG0tKpOGj6HWlNxdRLm2+pD8X5FZq7omNpbwoLe0szftSfrP8PBIlNRNC1Z15393CSm5S6NTi4val608PgknsrzOgmviJKMVTF6Lf1f/ADZGLhIynJ3zWr0S7R/7uAAZDcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf/Z" alt="">
+                <span class="text-overlay"><br>Failure Analysis</span>
+            </div>
+            </a>
+                                 
+    </div>
+</div>
+<div class="containerm">
+    <div class="row">
+        <a href="{{ url_for('energy')}}">
+            <div class="image">
+                <img src="https://gisresources.com/wp-content/uploads/2019/02/energy-800x500_c.png?ezimgfmt=ng%3Awebp%2Fngcb4%2Frs%3Adevice%2Frscb4-2" alt="">
+                <span class="text-overlay"><br>Energy Conservation</span>
+            </div>
+        </a>
+        <a href="{{ url_for('analysis') }}">
+            <div class="image">
+                <img src="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/1282863/retina_1708x683_image_0_-_2020-10-19T234908.526-9473d815ad946c7c3a3f240534268049.png" alt="">
+                <span class="text-overlay"><br>Data Visualisation</span>
+            </div>
+        </a>
+        <a href="{{ url_for('predictive') }}">
+            <div class="image">
+                <img src="https://appinventiv.com/wp-content/uploads/sites/1/2018/12/predictive-analytics-banner.png" alt="">
+                <span class="text-overlay"><br>Predictive Analysis</span>
+            </div>
+        </a>     
+    </div>
+</div>
+</body>
+</html>

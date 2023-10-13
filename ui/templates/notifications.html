@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../static/navbar.css">
+    <link rel="stylesheet" href="../static/notif.css">
+</head>
+<body>   
+        
+    <div class="navbar">
+        <img src="../static/logo.png">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('status') }}">Status</a>
+    <a href="{{ url_for('notifications') }}">Notifications</a>
+    <a href="{{ url_for('predictive') }}">Predictive Analysis</a>
+    <a href="{{ url_for('failure') }}">Failure Analysis</a>
+    <a href="{{ url_for('energy') }}">Energy Saving</a>
+    <a href="{{ url_for('analysis') }}">Data Analytics</a>
+
+</div>
+
+        <h1 style="margin-top:5%;text-align: center;font-size: 50px;color: white;">NOTIFICATIONS</h1>
+
+        <div class="notification-row">
+            <div class="notification-category">
+                <h2>Power Source</h2>
+                <img src="https://futurepowertech.net/wp-content/uploads/2015/03/Information-Security-Solutions.jpg" style="width:60%"></img>
+                {% if message1 == "No power!"%}
+                <p style="color: red;">{{message1}}</p>
+                {% elif message1=="No solar energy, buildings powered only through Conventional."%}
+                <p style="color:rgb(0, 73, 98);">{{message1}}</p>
+                {%else%}
+                <p style="color: green;">{{message1}}</p>
+                {% endif %}
+                
+            </div>
+            <div class="notification-category">
+                <h2>
+                    Power Availibilty
+                </h2>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1O8IFdMioajqcm6ukMaWCNGf1_1k5fNcJkQ&usqp=CAU" style="width:70%"></img>
+                {% if message2 == "None. Sufficient power for all buildings"%}
+                <p style="color: green;">{{message2}}</p>
+                {%else %}
+                <p style="color: red;">{{message_hosp}}</p>
+                <p style="color: red;">{{message_fact}}</p>
+                <p style="color: red;">{{message_house}}</p>
+                {% endif %}
+            </div>
+            <div class="notification-category">
+                <h2>Power Consumption</h2>
+                <img src="https://icon-library.com/images/energy-consumption-icon/energy-consumption-icon-5.jpg" style="width:80%"></img>
+                {% if message3 == "Safe consumption"%}
+                <p style="color: green;">{{message3}}</p>
+                {%else%}
+                <p style="color: red;">{{message3}}</p>
+                {% endif %}
+            </div>
+            <div class="notification-category">
+                <h2>Abnormal Alerts</h2>
+                <img src="https://cdn.brandmentions.com/blog/wp-content/uploads/2019/11/brandmentions-smart-alert-site.png" style="width:60%"></img>
+                {% if message4 == "No Abnormal Alerts!!"%}
+                <p style="color: green;">{{message4}}</p>
+                {%else%}
+                <p style="color: red;">{{message4}}</p>
+                <p style="color: red;">{{message5}}</p>
+                {% endif %}
+            </div>
+          </div>
+
+        
+</body>

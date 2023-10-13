@@ -1,0 +1,124 @@
+@font-face{
+    font-family: "italic";
+    src: url("../Static/Gotham-UltraItalic.otf");
+  }
+  @font-face{
+    font-family: "bold";
+    src: url("../Static/Gotham-Black.otf");
+  }
+  body {
+    
+ 
+  /* background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%); */
+  font-family: "bold";
+    margin: 0;
+    background-color: rgb(41, 40, 40);
+    color: rgb(210, 245, 255);
+  
+    padding: 0;
+  }
+  
+  .dashboard {
+    padding: 20px;
+  
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 4%;
+
+    font-size: 50px;
+    font-family: "italic";
+  }
+  
+  .overview{
+    margin-top: 50px;
+    text-align: center;
+  }
+  h2 {
+    margin-top: 20px;
+
+    padding-left: 30px;
+    font-size: 30px;
+    font-family: "bold";
+    
+  }
+  
+  .load,
+  .solar-panel {
+    border: 0px solid #e1ff75;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .load h3,
+  .solar-panel h3 {
+    margin: 0;
+
+    padding-left: 30px;
+  }
+  
+  
+  .load p,
+  .solar-panel p {
+    margin: 0;
+
+    padding-left: 80px;
+  }
+  
+  #energy-balance {
+    height: 50px;
+    text-align: center;
+    
+    background-color: #080274;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+   
+  #energy-balance:before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 60%;
+    background-color: #93f047;
+    border-radius: 5px;
+  }
+  
+  #load1-current,
+  #load2-current,
+  #panel1-current,
+  #panel2-current {
+
+    padding-left: 30px;
+    font-size:20px;
+    font-weight:bolder;
+    
+  
+    
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+    padding-left: 10%;
+  }
+  
+  .graph {
+
+    padding: 10px;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .solar-panel-monitoring,
+  .conventional-monitoring {
+    flex: 1;
+    margin-right: 20px;
+    text-align: center;
+    padding-bottom: 50px;
+  }

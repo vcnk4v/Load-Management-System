@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    overflow-x: hidden;
+    /* background-repeat: no-repeat; */
+    
+    background-image:url("https://blog.kelvin.ai/hubfs/IoT-kelvin-blog-scaled.jpg");
+    opacity:1.5;
+    margin: 0;
+    padding: 0;
+}
+.cylinder-container {
+    display: inline-block;
+    background-color: rgb(240, 223, 217); /* Adjust the color as needed */
+    border-radius: 50px; /* Adjust the border radius to achieve the desired cylinder shape */
+    padding: 10px; /* Adjust the padding as needed */
+    height:40%;
+    width:70%;
+  }
+  
+  .cylinder-text {
+    color: black; /* Adjust the text color as needed */
+    margin: 0; /* Remove any default margins */
+    font-size: 26px; /* Adjust the font size as needed */
+  }
+
+  .cylinder-container3 {
+    margin-top:5%;
+    display: inline-block;
+    background-color: rgb(207, 220, 227); /* Adjust the color as needed */
+    border-radius: 50px; /* Adjust the border radius to achieve the desired cylinder shape */
+    padding: 10px; /* Adjust the padding as needed */
+    height:50%;
+    width:70%;
+  }
+  .cylinder-container2 {
+    margin-top:5%;
+    display: inline-block;
+    background-color: rgb(206, 202, 202); /* Adjust the color as needed */
+    border-radius: 50px; /* Adjust the border radius to achieve the desired cylinder shape */
+    padding: 10px; /* Adjust the padding as needed */
+    height:30%;
+    width:70%;
+  }
+  .cylinder-container4 {
+    margin-top:5%;
+    display: inline-block;
+    background-color:rgb(207, 235, 207); /* Adjust the color as needed */
+    border-radius: 50px; /* Adjust the border radius to achieve the desired cylinder shape */
+    padding: 10px; /* Adjust the padding as needed */
+    height:50%;
+    width:70%;
+    margin-bottom: 5%;
+    padding-bottom: 2%;
+  
+  }
+  

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../static/style2.css">
+  <link rel="stylesheet" href="../static/navbar.css">
+</head>
+<body>
+  <div class="navbar">
+    <img src="../static/logo.png">
+<a href="{{ url_for('home') }}">Home</a>
+<a href="{{ url_for('status') }}">Status</a>
+<a href="{{ url_for('notifications') }}">Notifications</a>
+<a href="{{ url_for('predictive') }}">Predictive Analysis</a>
+<a href="{{ url_for('failure') }}">Failure Analysis</a>
+<a href="{{ url_for('energy') }}">Energy Saving</a>
+<a href="{{ url_for('analysis') }}">Data Analytics</a>
+
+</div>
+
+    <h1>Real Time Monitoring</h1>
+    <hr style="width: 75%;color: rgb(202, 179, 47);">
+    {% if message != 'safe' %}
+    <div style="font-size: 100px; text-align:center;color: red;">{{ message }}</div>
+    {% endif %}
+    <div class="container">
+      <div class="solar-panel-monitoring">
+        <h2>Solar Power</h2>
+        <div class="solar-panel" id="panel1">
+          <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2165216/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=10&type=line"></iframe>
+
+          <p id="panel1-current">Solar Current: {{ Solar }}</p>
+        </div>
+
+        <!-- Add more solar panel sections as needed -->
+      </div>
+      
+      <div class="conventional-monitoring">
+        <h2>Conventional Power</h2>
+        <div class="solar-panel" id="panel1">
+	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2165216/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=10&type=line"></iframe>
+
+          <p id="panel1-current">Conventional Currrent: {{ Conventional }}</p>
+        </div>
+        
+        <!-- Add more solar panel sections as needed -->
+      </div>
+    </div>
+    <div style="padding-left: 40%;">
+    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2165216/charts/6?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=10&type=line"></iframe>
+
+      <div><p style="font-size: 20px;font-weight:bolder;margin-left:15%;margin-bottom: 5%;">LDR: {{ LDR }} </p></div>
+    </div>
+    
+    
+    <div class="grid-container">
+	<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2165216/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=10&type=line"></iframe>
+      <div><p style="width:30%;padding: 4%;font-size: 20px;font-weight:bolder;margin-top:15%;border: solid 2px white;">Load1: {{ Load1 }} </p></div>
+      <div><p style="width:30%;padding: 4%;font-size: 20px;font-weight:bolder;margin-top:15%;border: solid 2px white;">Load2: {{ Load2 }} </p></div>
+      <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2165216/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=10&type=line"></iframe>
+
+     
+      <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2165216/charts/5?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=10&type=line"></iframe>
+
+      <div><p style="width:30%;padding: 4%;font-size: 20px;font-weight:bolder;margin-top:15%;border: solid 2px white;">Load3: {{ Load3 }} </p></div>
+      
+      
+    </div>
+  </div>
+
+<script>
+	setInterval(updateData, 16000);
+	function updateData() {
+  		location.reload();
+	}
+  
+
+</script>
+</body>
+</html>

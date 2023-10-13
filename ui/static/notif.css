@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-image:url("https://www.payoda.com/wp-content/uploads/2023/02/cloud-storage-background-business-network-design-scaled.jpg");
+    margin: 0;
+    padding: 0;
+}
+
+.notification-row {
+    display: flex;
+  }
+  
+  .notification-category {
+    flex: 1;
+    background-color: #f4f4f4d0;
+    padding-bottom: 60px;
+    padding-top: 20px;
+    height:600px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .notification-category h2 {
+    margin-top: 0;
+    font-size:30px;
+  }
+  
+  .notification-category p {
+    margin-bottom: 0;
+    margin-top: 10%;
+    padding: 4%;
+    font-size:35px;
+  }

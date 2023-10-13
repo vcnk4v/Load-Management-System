@@ -1,0 +1,56 @@
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+    /* height:50px; */
+  }
+  @font-face {
+    font-family: Impact;
+    src: url(impact/impact.ttf);
+  }
+  @font-face {
+    font-family: Cambria, Cochin;
+    src: url(Cochin-Font-1/Cochin.ttf);
+  }
+  .active {
+    overflow: hidden;
+    background-image: url("images/navbar_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* Add an active/current color */
+  }
+  
+  .navbar a {
+    float: right;
+    margin-right: 15px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: block;
+    color: rgb(248, 248, 248);
+    text-align: center;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .logo{
+    width: 50%;
+  }
+  .navbar img{
+    height: 10%;
+    width:170px;
+    float: left;
+    /* margin-right: 1150px; */
+    /* margin-left: -500%; */
+    /* margin-left: 400px; */
+    /* position:absolute; */
+    z-index:100;
+}
+
